@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+Pro:wght@400;600&display=swap");
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
+  color: #222;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  margin: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.6em;
+}
+
+/* Container */
+#main-canvas {
+  background-color: #ffffff;
+  padding-bottom: 2rem;
+}
+
+/* Printing styling */
+@media print {
+  nav,
+  footer,
+  .sidenav,
+  .hide-on-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  #main-canvas {
+    box-shadow: none !important;
+    padding: 0;
+  }
+
+  img {
+    print-color-adjust: exact;
+  }
+
+  /* Avoid page breaks */
+  .card,
+  table,
+  img,
+  h4,
+  h5 {
+    page-break-inside: avoid;
+  }
+}
+
+/* Profile Image*/
+img {
+  width: 150px;
+  /*height: 150px;*/
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.img-main {
+  float: right;
+  margin-right: 100px;
+}
+
+/* Text and layouting */
+p {
+  text-align: justify;
+  margin-bottom: 0.8em;
+}
+
+.prof-profile-adjusted {
+  margin-right: 40px;
+}
+
+/* span colors */
+.excellent {
+  background-color: #b4ff7d;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.basic {
+  background-color: #d8c5ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Fixed footer */
+footer.page-footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #0a1945; /* match the navbar color */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* Card overrides Materialize supported */
+.card {
+  border-radius: 8px !important;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.card-content {
+  padding: 1rem 1.5rem !important;
+}
+
+/* Section Title */
+.section-title {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  border-bottom: 3px solid #1e3a8a;
+  padding-bottom: 0.3rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #e8eef7;
+  padding: 8px;
+  font-weight: 600;
+}
+
+table td {
+  padding: 8px;
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: #f8f9fc;
+}
+
+/* Spacing Controlling */
+.section {
+  padding-top: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .img-main {
+    float: none;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+}
+
+nav.blue {
+  background-color: #1e3a8a !important;
+}
+
+nav.blue .brand-logo,
+nav.blue ul li a,
+nav.blue .material-icons {
+  color: white !important;
+}
+
+.sidenav a {
+  font-size: 1.1em;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+#downloadPDF {
+  margin-bottom: 20px;
+}
